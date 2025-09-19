@@ -1,0 +1,641 @@
+/* ESTILOS E S P E C F I C O S DA P G I N A INICIAL */
+/* Reset e s p e c f i c o para melhor controle */
+ body {
+font-family : 'Arial', sans-serif ;
+line-height : 1.6;
+}
+/* C a b e a l h o */
+header {
+background :#7761e6 ;
+padding : 20 px 0;
+text-align :center ;
+border-bottom:3 px solid #333;
+}
+
+.titulo-principal {
+font-size : 2.5 em ;
+color : #f70505;
+font-weight : bold ;
+text-transform : uppercase ;
+letter-spacing : 2 px ;
+}
+
+/* Banner principal */
+#banner {
+
+
+width : 100%;
+height : 400 px ;
+object-fit : cover ;
+display : block ;
+}
+/* S e o principal */
+.principal {
+background :#a3ec1a ;
+padding: 40 px 20 px ;
+text-align : center ;
+}
+.titulo-centralizado {
+font-size : 2 em ;
+color : #9c8fe7;
+margin-bottom : 20 px ;
+font-weight : bold ;
+}
+.principal p {
+font-size : 1.2 em ;
+margin : 15 px 0;
+max-width : 800 px ;
+margin-left : auto ;
+margin-right : auto ;
+color : #5f0bad;
+}
+
+/* P a r g r a f o da m i s s o com destaque */
+#missao {
+font-size : 1.4 em ! important ;
+background : #f7a3a3 ;
+padding : 20 px ;
+border-radius : 10 px ;
+border-left : 5 px solid #007 bff ;
+margin : 30 px auto ! important ;
+}
+#missao em strong {
+color : #007 bff ;
+font-size : 1.1 em ;
+}
+
+ /* S e o de b e n e f c i o s */
+.beneficios {
+background : #fff ;
+padding : 50 px 20 px ;
+display : flex ;
+flex-wrap : wrap ;
+justify-content : center ;
+
+
+align-items : flex - start ;
+gap : 40 px ;
+}
+
+.beneficios h3 {
+width : 100%;
+text-align : center ;
+margin-bottom : 30 px ;
+}
+
+/* Lista de b e n e f c i o s */
+.beneficios ul {
+flex : 1;
+min-width : 300 px ;
+max-width : 400 px ;
+}
+
+.itens {
+background : #6babeb ;
+margin : 15 px 0;
+padding : 15 px ;
+border-radius : 8 px ;
+border-left : 4 px solid#28a745 ;
+font-size:1.1 em ;
+transition : all 0.3 s ease ;
+}
+
+.itens:hover {
+background :#28a745 ;
+color:white
+transform translateX (10 px );
+}
+/* Imagem dos b e n e f c i o s */
+.imagembeneficios {
+flex : 1;
+min-width :300 px ;
+max-width : 500 px ;
+width : 100%;
+border-radius : 10 px ;
+box-shadow : 0 4 px 15 px rgba (0 ,0 ,0 ,0.1) ;
+}
+
+/* Responsividade b s i c a */
+@media ( max-width : 768px ) {
+.titulo-principal {
+font-size : 1.8 em ;
+}
+
+.beneficios {
+flex:direction column ;
+
+
+text-align:center 
+ 
+
+.principal p , #missao {
+font-size : 1 em ! important ;
+}
+}
+}
+
+
+
+/* === ANIMAÇÕES AVANÇADAS === */
+
+/* Animação de entrada para produtos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.produtos li {
+  animation: fadeInUp 0.6s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Delay para itens sequenciais */
+.produtos li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.produtos li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.produtos li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Efeito de hover mais elaborado */
+.produtos li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  opacity: 0;
+  border-radius: 15px;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.produtos li:hover::before {
+  opacity: 0.1;
+}
+
+/* Animação do botão de envio */
+@keyframes pulse {
+  0% {
+    box-shadow: 0000 rgba(40, 167, 69, 0.4);
+  }
+  70% {
+    box-shadow: 000 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0000 rgba(40, 167, 69, 0);
+  }
+}
+
+.enviar:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* Efeito parallax simples no banner */
+#banner {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* === EFEITOS VISUAIS MODERNOS === */
+
+/* Gradiente de fundo para principal */
+.principal {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+}
+
+.principal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)" /></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)" /></svg>');
+  pointer-events: none;
+}
+
+/* Sombras suaves */
+.card-shadow {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-shadow:hover {
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Bordas arredondadas modernas */
+.modern-border {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* === ESTILOS PARA JAVASCRIPT === */
+
+/* Estado de erro nos inputs */
+.input-padrao.erro {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.input-padrao.erro::placeholder {
+  color: #dc3545;
+}
+
+/* Animação de carregamento */
+.enviar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: linear-gradient(270deg, #28a745, #218838, #28a745);
+  background-size: 600% 600%;
+  animation: loading 1.5s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* === FORMULÁRIOS === */
+form {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+fieldset {
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background: white;
+}
+
+legend {
+  background: #667eea;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+form label {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-padrao {
+  display: block;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  width: 100%;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-padrao:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-padrao::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Radio buttons customizados */
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+  border-color: #667eea;
+  background: #667eea;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Checkbox customizado */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  margin-right: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  border-color: #28a745;
+  background: #28a745;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+
+/* Botão de envio */
+.enviar {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 30px auto 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+.enviar:active {
+  transform: translateY(-1px);
+}
+
+/* === INFORMAÇÕES DE CONTATO === */
+.informacoes-contato {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.informacoes-contato h3 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.info-item {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  border-left: 5px solid #667eea;
+}
+
+.info-item h4 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.info-item p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* === TABELA DE HORÁRIOS === */
+.horarios {
+  width: 100%;
+  margin: 30px 0;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.horarios caption {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.horarios thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.horarios th,
+.horarios td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.horarios tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.horarios tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* === RESPONSIVIDADE PARA FORMULÁRIOS === */
+@media (max-width: 768px) {
+  form,
+  .informacoes-contato {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .input-padrao {
+    padding: 10px 15px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .horarios th,
+  .horarios td {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+}
+
+
+
+/* === ANIMAÇÕES AVANÇADAS === */
+
+/* Animação de entrada para produtos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.produtos li {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Animações com delay para cada item */
+.produtos li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.produtos li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.produtos li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Efeito de hover mais elaborado */
+.produtos li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  opacity: 0;
+  border-radius: 15px;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.produtos li {
+  position: relative;
+  overflow: hidden;
+}
+
+.produtos li:hover::before {
+  opacity: 0.1;
+}
+
+/* Animação do botão de envio */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+.enviar:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* Efeito parallax simples no banner */
+#banner {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
